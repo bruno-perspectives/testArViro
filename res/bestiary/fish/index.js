@@ -1,7 +1,7 @@
 export default {
   id: 'fish',
   anchor: require('./fish.png'),
-  source: require('./fish.glb'),
+  source: require('./fish.vrx'),
 //   source: require('./BarramundiFish.gltf'),
 //   resources: [
 // require('./BarramundiFish_baseColor.png'),
@@ -9,5 +9,5 @@ export default {
 // require('./BarramundiFish_occlusionRoughnessMetallic.png'),
 // require('./BarramundiFish.bin'),
 //   ],
-  type: 'GLB',
+  type: 'VRX',
 }
