@@ -57,3 +57,5 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
+res/bestiary/video/20bestioles.mp4
+res/testVideo.mp4

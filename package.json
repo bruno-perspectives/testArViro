@@ -10,9 +10,15 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@ptomasroos/react-native-multi-slider": "^2.2.2",
     "@viro-community/react-viro": "^2.20.2",
+    "native-base": "^3.4.18",
+    "prettier": "^2.7.1",
     "react": "17.0.2",
-    "react-native": "0.65.1"
+    "react-native": "0.65.1",
+    "react-native-safe-area-context": "3.3.2",
+    "react-native-svg": "12.1.1",
+    "react-native-vector-icons": "^9.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
