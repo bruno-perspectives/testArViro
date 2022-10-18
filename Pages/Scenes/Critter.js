@@ -15,12 +15,14 @@ import {
   ViroTrackingStateConstants,
 } from '@viro-community/react-viro';
 import MultiSlider from '@ptomasroos/react-native-multi-slider';
-import { Fab, Icon } from 'native-base';
+import {Fab, Icon} from 'native-base';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const CritterScene = ({
   critter,
+  critters,
   arSceneNavigator,
+  sceneNavigator,
   yOffset = 0,
   onLoadStart,
   onLoadEnd,
@@ -190,10 +192,15 @@ const CritterScene = ({
     });
   };
 
-  const takeSapshot = () => {
-    console.log('aa', navRef.current)
-    navRef.current.takeScreenshot('sap', true);
-  }
+  const takeSapshot = async () => {
+    try {
+      console.log('aa', sceneNavigator);
+      const r = await sceneNavigator.takeScreenshot('sap', false);
+      console.log(r);
+    } catch (e) {
+      console.error(e);
+    }
+  };
 
   const _anchorFound = a => {
     console.log(a);
@@ -233,7 +240,7 @@ const CritterScene = ({
           innerAngle={5}
           outerAngle={20}
           direction={[0, -1, 0]}
-          position={[0, 4, 0]}
+          position={[0, 6, 0]}
           color="#ffffff"
           castsShadow={true}
           shadowNearZ={0.1}
@@ -243,22 +250,33 @@ const CritterScene = ({
         />
         <Critter
           ref={modelRef}
-          critter={critter}
-          scale={[0.1, 0.1, 0.1]}
-          position={[0, yOffset, 0]}
+          critter={critters[0]}
+          scale={[0.9, 0.9, 0.9]}
+          position={[-2, 0, -5]}
+          onRotate={_onRotate}
+          onPinch={_onPinch}
+          onLoadEnd={_onLoadEnd}
+          onLoadStart={_onLoadStart}
+        />
+        <Critter
+          // ref={modelRef}
+          critter={critters[1]}
+         scale={[0.2, 0.2, 0.2]}
+          position={[-2, 0, -5]}
+          // rotation={[0, 0, 90]}
           // onRotate={_onRotate}
           // onPinch={_onPinch}
           // onLoadEnd={_onLoadEnd}
           // onLoadStart={_onLoadStart}
         />
-        <ViroQuad
+        {/* <ViroQuad
           rotation={[-90, 0, 0]}
           position={[0, -0.001, 0]}
           width={2.5}
           height={2.5}
           arShadowReceiver={true}
           ignoreEventHandling={true}
-        />
+        /> */}
       </ViroNode>
       {/* </ViroARPlaneSelector> */}
       <Fab

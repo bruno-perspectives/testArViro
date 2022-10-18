@@ -65,14 +65,14 @@ const Show = () => {
       <ViroARSceneNavigator
         ref={navRef}
         autofocus={true}
-        initialScene={{
-          scene: EnvironementScene,
-          passProps: {bestiary: bestiary},
-        }}
         // initialScene={{
-        //   scene: CritterScene,
-        //   passProps: {critter: bestiary[0]},
+        //   scene: EnvironementScene,
+        //   passProps: {bestiary: bestiary},
         // }}
+        initialScene={{
+          scene: CritterScene,
+          passProps: {critter: bestiary[1], critters: bestiary},
+        }}
         style={styles.f1}
       />
     </>

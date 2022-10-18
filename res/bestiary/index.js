@@ -1,3 +1,4 @@
+import blackPanther from './blackPanther';
 import cube from './cube';
 import duck from './duck';
 import fish from './fish';
@@ -7,10 +8,11 @@ import tesla from './tesla';
 import video from './video';
 
 export default [
+  blackPanther,
+  fish,
   tesla,
   cube,
   duck,
-  fish,
   image,
   video
 ];
