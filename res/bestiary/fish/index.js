@@ -1,16 +1,18 @@
 export default {
   id: 'fish',
   anchor: require('./fish.png'),
-  source: require('./test.vrx'),
-  animation: {name: 'Spider_Armature|run_ani_vor', run: true, loop: true},
-  //   source: require('./BarramundiFish.gltf'),
+  // source: require('./test.vrx'),
+  source: require('./PoissonBonesTest.vrx'),
+  // animation: {
+  //   // name: 'loggerhead.armature|loggerhead.armature|loggerhead.armature|Armature.loggerheadActi',
+  //   name: 'Take 001',
+  //   run: true,
+  //   loop: true,
+  // },
   resources: [
-    require('./textures/haar_detail_NRM.jpg'),
-    require('./textures/SH3.png'),
-    require('./textures/Spinnen_Bein_tex_2.jpg'),
-    require('./textures/Spinnen_Bein_tex_COLOR_.jpg'),
-    require('./textures/Spinnen_Bein_tex_COLOR_.png'),
-    require('./textures/Spinnen_Bein_tex.jpg'),
+    // require('./textures/loggerhead_8bit_roughness.jpeg'),
+    // require('./textures/loggerhead_8bit_normal.jpeg'),
+    // require('./textures/loggerhead_8bit_albedo2.png'),
   ],
   //  material: {
   //   lightingModel: "PBR",

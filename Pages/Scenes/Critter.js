@@ -11,6 +11,7 @@ import {
   ViroController,
   ViroNode,
   ViroQuad,
+  ViroSphere,
   ViroSpotLight,
   ViroTrackingStateConstants,
 } from '@viro-community/react-viro';
@@ -234,8 +235,9 @@ const CritterScene = ({
         rotation={rotation}
         dragType="FixedToWorld"
         key={critter.id}
-        onRotate={_onRotate}
-        onPinch={_onPinch}>
+        // onRotate={_onRotate}
+        // onPinch={_onPinch}
+        >
         <ViroSpotLight
           innerAngle={5}
           outerAngle={20}
@@ -248,12 +250,16 @@ const CritterScene = ({
           shadowOpacity={0.9}
           ref={spotRef}
         />
+        <ViroSphere radius={1} position={[0, 0, -60]}
+        // scale={[0.001, 0.001, 0.001]}
+        >
+        </ViroSphere>
         <Critter
-          ref={modelRef}
+          // ref={modelRef}
           critter={critters[0]}
-          scale={[0.01, 0.01, 0.01]}
-          position={[-2, 0, -50]}
-          rotation={[90, 0, 0]}
+          scale={[0.1, 0.1, 0.1]}
+          position={[0, 0, -60]}
+           rotation={[90, 45, 0]}
           // onRotate={_onRotate}
           // onPinch={_onPinch}
           // onLoadEnd={_onLoadEnd}
@@ -262,9 +268,9 @@ const CritterScene = ({
         <Critter
           // ref={modelRef}
           critter={critters[1]}
-          scale={[0.9, 0.9, 0.9]}
-          position={[-2, 0, -5]}
-          // rotation={[0, 0, 90]}
+          scale={[0.001, 0.001, 0.001]}
+          position={[20, 0, -60]}
+          rotation={[90, 180, 0]}
           // onRotate={_onRotate}
           // onPinch={_onPinch}
           // onLoadEnd={_onLoadEnd}
