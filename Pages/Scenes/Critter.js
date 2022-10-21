@@ -251,8 +251,9 @@ const CritterScene = ({
         <Critter
           ref={modelRef}
           critter={critters[0]}
-          scale={[0.1, 0.1, 0.1]}
-          position={[-2, 0, -5]}
+          scale={[0.01, 0.01, 0.01]}
+          position={[-2, 0, -50]}
+          rotation={[90, 0, 0]}
           // onRotate={_onRotate}
           // onPinch={_onPinch}
           // onLoadEnd={_onLoadEnd}
