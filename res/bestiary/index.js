@@ -8,8 +8,8 @@ import tesla from './tesla';
 import video from './video';
 
 export default [
-  blackPanther,
   fish,
+  blackPanther,
   tesla,
   cube,
   duck,

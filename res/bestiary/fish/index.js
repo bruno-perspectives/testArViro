@@ -1,8 +1,8 @@
 export default {
   id: 'fish',
   anchor: require('./fish.png'),
-  source: require('./FISDDDH.vrx'),
-  animation: {name: 'Armature|ArmatureAction', run: true, loop: true},
+  source: require('./PoissonBonesTest.vrx'),
+  animation: {name: 'Take 001', run: true, loop: true},
   //   source: require('./BarramundiFish.gltf'),
   // resources: [
   //   require('./object_bpanther_Base_Color.png'),
